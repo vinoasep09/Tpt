@@ -1,0 +1,698 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>TPT – Tobi Panda Temben</title>
+<style>
+:root{--bg:#f3f9ff;--card:#fff;--tx:#14202b;--mu:#5b6b7a;--bl:#4fb3f6;--bd:#0d1b2a;--lt:#e2f2ff;--ok:#2e9e5b;--no:#d64545;--ln:#d3e6f5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0c1520;--card:#142130;--tx:#e8f1f8;--mu:#93a6b8;--lt:#1b3248;--ln:#27415a;--bd:#e8f1f8}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP",sans-serif;background:var(--bg);color:var(--tx);padding-bottom:70px;line-height:1.5}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--ln);padding:8px 12px 0;padding-top:calc(8px + env(safe-area-inset-top,0px));margin-top:calc(-1*env(safe-area-inset-top,0px))}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800}.logo small{display:block;font-weight:500;color:var(--mu);font-size:11px}
+nav{display:flex;gap:6px;overflow-x:auto;padding:8px 0;scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+nav a{white-space:nowrap;text-decoration:none;color:var(--tx);padding:7px 12px;border-radius:99px;font-size:14px;background:var(--lt)}nav a.on{background:var(--bl);color:#fff;font-weight:700}
+main{max-width:900px;margin:0 auto;padding:14px}
+h2{margin:6px 0 4px}.sub{color:var(--mu);margin:0 0 12px;font-size:14px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:16px;padding:14px;margin-bottom:12px}
+.hero{text-align:center;background:linear-gradient(160deg,var(--lt),var(--card));padding:24px 16px}.hero h1{font-size:26px;margin:8px 0}.hero p{color:var(--mu);margin:0 auto 16px;max-width:560px}
+.btn{display:inline-block;border:0;border-radius:12px;padding:12px 16px;font-size:15px;font-weight:700;text-decoration:none;cursor:pointer;margin:4px;background:var(--bl);color:#fff;font-family:inherit}.btn.d{background:var(--bd);color:var(--bg)}.btn.o{background:var(--lt);color:var(--tx)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.fc{text-decoration:none;color:var(--tx);text-align:center;padding:16px 8px;font-weight:700}.fc span{display:block;font-size:28px}
+.kg{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.tile{border:1px solid var(--ln);background:var(--lt);border-radius:12px;padding:8px 2px;text-align:center;cursor:pointer;color:var(--tx);font-family:inherit}.tile b{display:block;font-size:26px;line-height:1.2}.tile i{font-style:normal;font-size:12px;color:var(--mu)}
+.tabs{display:flex;gap:6px;margin-bottom:12px}.tabs .btn{flex:1;margin:0}
+.row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.sp{border:0;background:var(--bl);color:#fff;border-radius:50%;width:40px;height:40px;font-size:18px;cursor:pointer;flex:none}
+.lb{border:1px solid var(--ln);background:none;color:var(--mu);border-radius:99px;padding:5px 11px;font-size:12px;cursor:pointer;font-family:inherit}.lb.on{background:var(--ok);color:#fff;border-color:var(--ok)}
+.jp{font-size:22px;font-weight:700}.rm{color:var(--mu);font-size:13px}ruby rt{font-size:11px;color:var(--bl)}
+.big{font-size:44px;font-weight:700;line-height:1}.ex{border-top:1px dashed var(--ln);margin-top:8px;padding-top:8px}
+.opt{display:block;width:100%;text-align:left;margin:6px 0;padding:12px;border-radius:12px;border:1px solid var(--ln);background:var(--card);color:var(--tx);font-size:15px;font-family:inherit;cursor:pointer}.opt.ok{background:var(--ok);color:#fff}.opt.no{background:var(--no);color:#fff}
+.bar{height:12px;background:var(--lt);border-radius:9px;overflow:hidden}.bar div{height:100%;background:var(--bl);transition:width .4s}
+.note{background:var(--lt);border-radius:12px;padding:10px;font-size:13px}
+#ab.h{display:none}#fb{position:fixed;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:7;width:46px;height:46px;border-radius:50%;border:0;background:var(--bd);color:var(--bg);font-size:20px;opacity:.85;cursor:pointer}#ab:not(.h)~#fb{bottom:calc(130px + env(safe-area-inset-bottom,0px))}#ab{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--bd);color:var(--bg);display:flex;gap:6px;align-items:center;justify-content:center;padding:8px 10px;padding-bottom:calc(8px + env(safe-area-inset-bottom,0px));flex-wrap:wrap}
+#ab button,#ab select{border:0;border-radius:10px;padding:9px 12px;font-size:14px;font-family:inherit;background:var(--bl);color:#fff;font-weight:700}#ab select{background:var(--card);color:var(--tx)}
+#ab span{font-size:11px;flex-basis:100%;text-align:center;opacity:.85}
+</style></head><body>
+<header><div class="logo"><svg id="lg" width="36" height="36"></svg><div>TPT<small>Tobi Panda Temben</small></div></div><nav id="nav"></nav></header>
+<main id="app"></main>
+<div id="ab" class="h"><button id="bp">▶ Play</button><button id="bz">⏸ Pause</button><button id="bs">⏹ Stop</button><select id="sr" aria-label="Kecepatan"><option value="0.6">Pelan 0.6x</option><option value="0.8">Lambat 0.8x</option><option value="1" selected>Normal 1x</option><option value="1.2">Cepat 1.2x</option></select><span id="st">Ketuk tombol 🔊 untuk mendengar bahasa Jepang</span></div><button id="fb" aria-label="Kontrol suara">🎚️</button>
+<script>
+const panda=s=>`<svg viewBox="0 0 100 100" width="${s}" height="${s}"><circle cx="22" cy="22" r="14" fill="#14202b"/><circle cx="78" cy="22" r="14" fill="#14202b"/><circle cx="50" cy="55" r="38" fill="#fff" stroke="#14202b" stroke-width="3"/><ellipse cx="35" cy="50" rx="10" ry="13" transform="rotate(20 35 50)" fill="#14202b"/><ellipse cx="65" cy="50" rx="10" ry="13" transform="rotate(-20 65 50)" fill="#14202b"/><circle cx="36" cy="49" r="4" fill="#fff"/><circle cx="64" cy="49" r="4" fill="#fff"/><ellipse cx="50" cy="63" rx="6" ry="4" fill="#14202b"/><path d="M43 71q7 6 14 0" stroke="#14202b" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="27" cy="66" r="5" fill="#8fd0ff" opacity=".7"/><circle cx="73" cy="66" r="5" fill="#8fd0ff" opacity=".7"/></svg>`;
+document.getElementById('lg').outerHTML=panda(36);
+const $=s=>document.querySelector(s);
+// ---------- Audio ----------
+let last="",voices=[],rate=1;const synth=window.speechSynthesis;
+function lv(){if(synth)voices=synth.getVoices()}lv();if(synth)synth.onvoiceschanged=lv;
+function say(m){$('#st').textContent=m;if(/^⚠️|belum terpasang|Gagal|tidak mendukung/.test(m))$('#ab').classList.remove('h')}
+$('#fb').onclick=()=>$('#ab').classList.toggle('h');
+function speak(t){if(!synth){say("Browser tidak mendukung suara. Coba Chrome.");return}
+last=t;lv();if(synth.speaking||synth.pending)synth.cancel();if(synth.paused)synth.resume();const u=new SpeechSynthesisUtterance(t);u.lang='ja-JP';u.rate=rate;u.volume=1;window._u=u;let ok=0;
+const v=voices.find(v=>/^ja/i.test(v.lang.replace('_','-')));if(v)u.voice=v;else if(voices.length)say("Suara Jepang belum terpasang. Android: Pengaturan > Bahasa > Output teks-ke-ucapan > Google > unduh Jepang.");
+u.onstart=()=>{ok=1;say("🔊 "+t)};setTimeout(()=>{if(!ok)say("⚠️ Tidak ada suara. Buka halaman ini di Chrome (bukan di dalam aplikasi), naikkan volume media, dan pastikan suara Jepang terpasang: Pengaturan > Bahasa > Output teks-ke-ucapan > Google > Instal data suara Jepang.")},2500);u.onend=()=>say("Selesai. Ketuk Play untuk mengulang.");u.onerror=()=>say("Gagal memutar suara. Coba lagi.");
+synth.speak(u)}
+$('#bp').onclick=()=>{if(synth&&synth.paused){synth.resume();say("▶ Dilanjutkan")}else if(last)speak(last);else say("Pilih tulisan Jepang dulu (tombol 🔊)")};
+$('#bz').onclick=()=>{if(synth&&synth.speaking){synth.pause();say("⏸ Dijeda. Jika tidak berhenti di HP, tekan Stop lalu Play.")}};
+$('#bs').onclick=()=>{if(synth){synth.cancel();say("⏹ Berhenti")}};
+$('#sr').onchange=e=>{rate=+e.target.value;if(last)speak(last)};
+// ---------- Storage ----------
+let st={l:{},d:{},goal:10};
+try{const x=JSON.parse(localStorage.getItem('tpt1'));if(x)st=Object.assign(st,x)}catch(e){}
+const save=()=>{try{localStorage.setItem('tpt1',JSON.stringify(st))}catch(e){}};
+const today=()=>new Date().toLocaleDateString('sv');
+const bump=()=>{st.d[today()]=(st.d[today()]||0)+1;save()};
+// ---------- Data ----------
+const conv=s=>[...s].map(c=>String.fromCharCode(c.charCodeAt(0)+96)).join('');
+const KR=[["あいうえお","a i u e o"],["かきくけこ","ka ki ku ke ko"],["さしすせそ","sa shi su se so"],["たちつてと","ta chi tsu te to"],["なにぬねの","na ni nu ne no"],["はひふへほ","ha hi fu he ho"],["まみむめも","ma mi mu me mo"],["やゆよ","ya yu yo"],["らりるれろ","ra ri ru re ro"],["わをん","wa wo n"],["がぎぐげご","ga gi gu ge go"],["ざじずぜぞ","za ji zu ze zo"],["だぢづでど","da ji zu de do"],["ばびぶべぼ","ba bi bu be bo"],["ぱぴぷぺぽ","pa pi pu pe po"]];
+const KH=["あめ|ame|hujan","かさ|kasa|payung","さかな|sakana|ikan","たまご|tamago|telur","ねこ|neko|kucing","はな|hana|bunga","みず|mizu|air","やま|yama|gunung","さくら|sakura|bunga sakura","わたし|watashi|saya","がっこう|gakkou|sekolah","かぜ|kaze|angin","でんわ|denwa|telepon","ばなな|banana|pisang","ぱん|pan|roti"];
+const KK=["アイス|aisu|es krim","カメラ|kamera|kamera","サラダ|sarada|salad","テレビ|terebi|televisi","ナイフ|naifu|pisau","ハム|hamu|ham","ミルク|miruku|susu","ヨーグルト|yoogurto|yogurt","ラジオ|rajio|radio","ワイン|wain|anggur","ガム|gamu|permen karet","ゼロ|zero|nol","ドア|doa|pintu","バス|basu|bis","パン|pan|roti"];
+const N5=`わたし|私|watashi|saya
+がくせい|学生|gakusei|pelajar
+せんせい|先生|sensei|guru
+ともだち|友達|tomodachi|teman
+ほん|本|hon|buku
+みず|水|mizu|air
+たべる|食べる|taberu|makan
+のむ|飲む|nomu|minum
+いく|行く|iku|pergi
+くる|来る|kuru|datang
+みる|見る|miru|melihat
+きく|聞く|kiku|mendengar
+はなす|話す|hanasu|berbicara
+よむ|読む|yomu|membaca
+かく|書く|kaku|menulis
+おおきい|大きい|ookii|besar
+ちいさい|小さい|chiisai|kecil
+あたらしい|新しい|atarashii|baru
+ふるい|古い|furui|lama (benda)
+たかい|高い|takai|mahal / tinggi
+やすい|安い|yasui|murah
+いい|いい|ii|bagus
+がっこう|学校|gakkou|sekolah
+いえ|家|ie|rumah
+でんしゃ|電車|densha|kereta listrik
+くるま|車|kuruma|mobil
+きょう|今日|kyou|hari ini
+あした|明日|ashita|besok
+おいしい|美味しい|oishii|enak
+ありがとう|ありがとう|arigatou|terima kasih
+おはよう|おはよう|ohayou|selamat pagi
+こんにちは|こんにちは|konnichiwa|selamat siang
+こんばんは|こんばんは|konbanwa|selamat malam
+すみません|すみません|sumimasen|permisi / maaf
+ごめんなさい|ごめんなさい|gomennasai|maaf
+おねがいします|お願いします|onegaishimasu|tolong / mohon
+あなた|あなた|anata|kamu
+かぞく|家族|kazoku|keluarga
+ちち|父|chichi|ayah (saya)
+はは|母|haha|ibu (saya)
+あに|兄|ani|kakak laki-laki
+あね|姉|ane|kakak perempuan
+おとうと|弟|otouto|adik laki-laki
+いもうと|妹|imouto|adik perempuan
+こども|子供|kodomo|anak
+おとこ|男|otoko|laki-laki
+おんな|女|onna|perempuan
+いぬ|犬|inu|anjing
+ねこ|猫|neko|kucing
+さかな|魚|sakana|ikan
+とり|鳥|tori|burung
+くだもの|果物|kudamono|buah
+やさい|野菜|yasai|sayur
+にく|肉|niku|daging
+ごはん|ご飯|gohan|nasi / makan
+たまご|卵|tamago|telur
+おちゃ|お茶|ocha|teh
+えき|駅|eki|stasiun
+みち|道|michi|jalan
+みせ|店|mise|toko
+ぎんこう|銀行|ginkou|bank
+ゆうびんきょく|郵便局|yuubinkyoku|kantor pos
+としょかん|図書館|toshokan|perpustakaan
+かいしゃ|会社|kaisha|perusahaan
+へや|部屋|heya|kamar
+でんわ|電話|denwa|telepon
+てがみ|手紙|tegami|surat
+しゃしん|写真|shashin|foto
+えいが|映画|eiga|film
+おんがく|音楽|ongaku|musik
+うた|歌|uta|lagu
+あさ|朝|asa|pagi
+ひる|昼|hiru|siang
+よる|夜|yoru|malam
+きのう|昨日|kinou|kemarin
+まいにち|毎日|mainichi|setiap hari
+いま|今|ima|sekarang
+なに|何|nani|apa
+だれ|誰|dare|siapa
+どこ|どこ|doko|di mana
+いつ|いつ|itsu|kapan
+いくら|いくら|ikura|berapa (harga)
+あめ|雨|ame|hujan
+てんき|天気|tenki|cuaca
+いち|一|ichi|satu
+に|二|ni|dua
+さん|三|san|tiga
+よん|四|yon|empat
+ご|五|go|lima
+ろく|六|roku|enam
+なな|七|nana|tujuh
+はち|八|hachi|delapan
+きゅう|九|kyuu|sembilan
+じゅう|十|juu|sepuluh
+ひゃく|百|hyaku|seratus
+せん|千|sen|seribu
+あう|会う|au|bertemu
+かう|買う|kau|membeli
+あるく|歩く|aruku|berjalan
+はしる|走る|hashiru|berlari
+あそぶ|遊ぶ|asobu|bermain
+ねる|寝る|neru|tidur
+おきる|起きる|okiru|bangun
+する|する|suru|melakukan
+ある|ある|aru|ada (benda)
+いる|いる|iru|ada (makhluk hidup)
+かえる|帰る|kaeru|pulang
+はいる|入る|hairu|masuk
+でる|出る|deru|keluar
+まつ|待つ|matsu|menunggu
+つかう|使う|tsukau|memakai
+あげる|あげる|ageru|memberi
+もらう|もらう|morau|menerima
+べんきょう|勉強|benkyou|belajar
+しごと|仕事|shigoto|pekerjaan
+やすみ|休み|yasumi|libur
+あつい|暑い|atsui|panas (cuaca)
+さむい|寒い|samui|dingin (cuaca)
+おもしろい|面白い|omoshiroi|menarik
+むずかしい|難しい|muzukashii|sulit
+やさしい|易しい|yasashii|mudah
+ながい|長い|nagai|panjang
+みじかい|短い|mijikai|pendek
+はやい|早い|hayai|cepat / awal
+あかい|赤い|akai|merah
+あおい|青い|aoi|biru
+しろい|白い|shiroi|putih
+くろい|黒い|kuroi|hitam
+げんき|元気|genki|sehat / semangat
+すき|好き|suki|suka
+きれい|きれい|kirei|cantik / bersih
+ゆうめい|有名|yuumei|terkenal
+しずか|静か|shizuka|tenang
+にぎやか|賑やか|nigiyaka|ramai`.split('\n').map(x=>x.split('|'));
+const N4=`けいけん|経験|keiken|pengalaman
+しょうかい|紹介|shoukai|perkenalan
+じゅんび|準備|junbi|persiapan
+やくそく|約束|yakusoku|janji
+りょこう|旅行|ryokou|perjalanan
+びょういん|病院|byouin|rumah sakit
+びょうき|病気|byouki|sakit (penyakit)
+とどける|届ける|todokeru|mengantarkan
+つかれる|疲れる|tsukareru|lelah
+わすれる|忘れる|wasureru|lupa
+おぼえる|覚える|oboeru|menghafal
+まにあう|間に合う|maniau|sempat / tepat waktu
+かんがえる|考える|kangaeru|berpikir
+おくる|送る|okuru|mengirim
+しらべる|調べる|shiraberu|memeriksa
+うんてん|運転|unten|mengemudi
+だいじ|大事|daiji|penting
+あんぜん|安全|anzen|aman
+ふべん|不便|fuben|tidak praktis
+とくに|特に|tokuni|terutama
+かいぎ|会議|kaigi|rapat
+きょうみ|興味|kyoumi|minat
+けっか|結果|kekka|hasil
+しあい|試合|shiai|pertandingan
+しゅうかん|習慣|shuukan|kebiasaan
+じゅぎょう|授業|jugyou|pelajaran
+じゅうしょ|住所|juusho|alamat
+じこ|事故|jiko|kecelakaan
+せいかつ|生活|seikatsu|kehidupan
+せつめい|説明|setsumei|penjelasan
+そうだん|相談|soudan|konsultasi
+ちゅうい|注意|chuui|perhatian
+でんき|電気|denki|listrik / lampu
+ねだん|値段|nedan|harga
+ひこうき|飛行機|hikouki|pesawat
+ふくしゅう|復習|fukushuu|mengulang pelajaran
+よしゅう|予習|yoshuu|persiapan pelajaran
+よてい|予定|yotei|rencana / jadwal
+りゆう|理由|riyuu|alasan
+れんしゅう|練習|renshuu|latihan
+あつまる|集まる|atsumaru|berkumpul
+あやまる|謝る|ayamaru|minta maaf
+いそぐ|急ぐ|isogu|bergegas
+うごく|動く|ugoku|bergerak
+えらぶ|選ぶ|erabu|memilih
+おこる|怒る|okoru|marah
+おどる|踊る|odoru|menari
+かえる|変える|kaeru|mengubah
+かたづける|片付ける|katazukeru|membereskan
+きめる|決める|kimeru|memutuskan
+こまる|困る|komaru|kesulitan
+さがす|探す|sagasu|mencari
+すてる|捨てる|suteru|membuang
+そだてる|育てる|sodateru|membesarkan
+たずねる|訪ねる|tazuneru|mengunjungi
+つたえる|伝える|tsutaeru|menyampaikan
+てつだう|手伝う|tetsudau|membantu
+ならう|習う|narau|belajar (dari guru)
+のりかえる|乗り換える|norikaeru|berganti kendaraan
+はこぶ|運ぶ|hakobu|membawa / mengangkut
+ひろう|拾う|hirou|memungut
+ふとる|太る|futoru|menjadi gemuk
+やせる|痩せる|yaseru|menjadi kurus
+よごれる|汚れる|yogoreru|menjadi kotor
+ちかい|近い|chikai|dekat
+とおい|遠い|tooi|jauh
+あぶない|危ない|abunai|berbahaya
+うれしい|嬉しい|ureshii|senang
+かなしい|悲しい|kanashii|sedih
+さびしい|寂しい|sabishii|kesepian
+はずかしい|恥ずかしい|hazukashii|malu
+ひどい|ひどい|hidoi|parah / kejam
+べんり|便利|benri|praktis
+じょうず|上手|jouzu|pandai
+へた|下手|heta|tidak pandai
+ぜひ|ぜひ|zehi|pasti / harus
+たぶん|たぶん|tabun|mungkin
+もうすぐ|もうすぐ|mousugu|sebentar lagi
+だんだん|だんだん|dandan|perlahan-lahan
+ずっと|ずっと|zutto|terus-menerus / jauh lebih`.split('\n').map(x=>x.split('|'));
+// kanji, arti, onyomi, kunyomi, contoh(kana|kanji|arti)
+const KJ=`日|hari / matahari|ニチ・ジツ|ひ・か|にちようび|日曜日|hari Minggu
+月|bulan|ゲツ・ガツ|つき|げつようび|月曜日|hari Senin
+火|api|カ|ひ|かようび|火曜日|hari Selasa
+水|air|スイ|みず|すいようび|水曜日|hari Rabu
+木|pohon|モク|き|もくようび|木曜日|hari Kamis
+金|emas / uang|キン|かね|おかね|お金|uang
+山|gunung|サン|やま|ふじさん|富士山|Gunung Fuji
+川|sungai|セン|かわ|かわ|川|sungai
+人|orang|ジン・ニン|ひと|にほんじん|日本人|orang Jepang
+大|besar|ダイ・タイ|おお(きい)|だいがく|大学|universitas
+小|kecil|ショウ|ちい(さい)|しょうがくせい|小学生|murid SD
+学|belajar|ガク|まな(ぶ)|がっこう|学校|sekolah
+食|makan|ショク|た(べる)|たべもの|食べ物|makanan
+見|melihat|ケン|み(る)|けんがく|見学|kunjungan belajar
+行|pergi|コウ・ギョウ|い(く)|ぎんこう|銀行|bank
+来|datang|ライ|く(る)|らいねん|来年|tahun depan
+思|berpikir / merasa|シ|おも(う)|おもう|思う|berpikir
+意|maksud|イ|-|いみ|意味|arti
+教|mengajar|キョウ|おし(える)|きょうしつ|教室|ruang kelas
+院|institusi|イン|-|びょういん|病院|rumah sakit
+上|atas|ジョウ|うえ・あ(がる)|うえ|上|atas
+下|bawah|カ・ゲ|した・さ(がる)|した|下|bawah
+中|tengah / dalam|チュウ|なか|なか|中|dalam
+外|luar|ガイ|そと|がいこく|外国|luar negeri
+左|kiri|サ|ひだり|ひだり|左|kiri
+右|kanan|ウ|みぎ|みぎ|右|kanan
+本|buku / asal|ホン|もと|にほん|日本|Jepang
+年|tahun|ネン|とし|ことし|今年|tahun ini
+時|waktu / jam|ジ|とき|じかん|時間|waktu
+分|menit / paham|フン・ブン|わ(かる)|じぶん|自分|diri sendiri
+口|mulut|コウ|くち|いりぐち|入口|pintu masuk
+目|mata|モク|め|め|目|mata
+手|tangan|シュ|て|てがみ|手紙|surat
+足|kaki|ソク|あし|あし|足|kaki
+車|mobil|シャ|くるま|でんしゃ|電車|kereta listrik
+先|dahulu / ujung|セン|さき|せんせい|先生|guru
+生|hidup / lahir|セイ・ショウ|い(きる)・う(まれる)|がくせい|学生|pelajar
+語|bahasa|ゴ|かた(る)|にほんご|日本語|bahasa Jepang
+会|bertemu|カイ|あ(う)|かいしゃ|会社|perusahaan
+店|toko|テン|みせ|てんいん|店員|pegawai toko
+仕|melayani|シ|-|しごと|仕事|pekerjaan
+駅|stasiun|エキ|-|えき|駅|stasiun
+道|jalan|ドウ|みち|みち|道|jalan
+関|hubungan|カン|せき|かんけい|関係|hubungan (N3)
+経|melewati / ekonomi|ケイ|へ(る)|けいざい|経済|ekonomi (N3)
+環|lingkaran|カン|-|かんきょう|環境|lingkungan (N3)
+責|tanggung jawab|セキ|せ(める)|せきにん|責任|tanggung jawab (N2)
+貢|kontribusi|コウ|みつ(ぐ)|こうけん|貢献|kontribusi (N1)`.split('\n').map(x=>x.split('|'));
+// grammar: judul, penjelasan, contoh [jp, arti]
+const GR=[["N5","X は Y です","Pola dasar “X adalah Y”. Partikel は (dibaca wa) menandai topik. Bentuk negatif: ではありません / じゃないです.",[["私は学生です。","Saya adalah pelajar."],["田中さんは先生じゃないです。","Tanaka bukan guru."]]],
+["N5","これ・それ・あれ","Kata tunjuk benda: これ (dekat pembicara), それ (dekat lawan bicara), あれ (jauh dari keduanya).",[["これは本です。","Ini buku."],["あれは何ですか。","Itu (di sana) apa?"]]],
+["N5","Kata kerja ～ます / ～ません","Bentuk sopan. ～ます untuk kebiasaan/masa depan, ～ません negatif.",[["毎日、水を飲みます。","Setiap hari saya minum air."],["肉を食べません。","Saya tidak makan daging."]]],
+["N5","Partikel を・に・で","を menandai objek. に menandai tujuan/waktu. で menandai tempat berlangsungnya aksi atau alat.",[["パンを食べます。","Makan roti."],["学校に行きます。","Pergi ke sekolah."],["図書館で勉強します。","Belajar di perpustakaan."]]],
+["N5","～ました / ～ませんでした","Bentuk lampau sopan. Ganti ます dengan ました (positif) atau ませんでした (negatif).",[["昨日、映画を見ました。","Kemarin saya menonton film."],["朝ご飯を食べませんでした。","Saya tidak sarapan."]]],
+["N5","～たいです","Menyatakan keinginan. Ubah ます menjadi たい. Objek bisa memakai を atau が.",[["日本に行きたいです。","Saya ingin pergi ke Jepang."],["水が飲みたいです。","Saya ingin minum air."]]],
+["N4","～たことがあります","Pernah melakukan sesuatu (pengalaman). Gunakan bentuk lampau biasa (た) + ことがある.",[["富士山を見たことがあります。","Saya pernah melihat Gunung Fuji."]]],
+["N4","～ながら","Melakukan dua hal bersamaan. Ambil bentuk ます tanpa ます + ながら.",[["音楽を聞きながら勉強します。","Saya belajar sambil mendengarkan musik."]]],
+["N4","～なければなりません","Harus melakukan sesuatu. Ubah ない menjadi なければなりません.",[["毎日、薬を飲まなければなりません。","Saya harus minum obat setiap hari."]]],
+["N4","～ようと思います","Berencana / berniat melakukan sesuatu. Bentuk kemauan (volitional) + と思います.",[["来年、日本へ行こうと思います。","Saya berniat pergi ke Jepang tahun depan."]]],
+['N5','～てください','Meminta seseorang melakukan sesuatu. Bentuk-て + ください.',[['水を飲んでください。','Tolong minum air.'],['ゆっくり話してください。','Tolong bicara pelan-pelan.']]],
+['N5','～ています','Sedang melakukan sesuatu, atau keadaan yang berlangsung. Bentuk-て + います.',[['今、勉強しています。','Sekarang saya sedang belajar.'],['東京に住んでいます。','Saya tinggal di Tokyo.']]],
+['N5','～てもいいです','Meminta atau memberi izin (boleh). Bentuk-て + もいいです.',[['ここに座ってもいいですか。','Bolehkah saya duduk di sini?']]],
+['N5','～てはいけません','Larangan (tidak boleh). Bentuk-て + はいけません.',[['ここで写真を撮ってはいけません。','Dilarang memotret di sini.']]],
+['N5','あります / います','あります untuk benda mati dan tumbuhan, います untuk makhluk hidup. Tempat + に + benda + が.',[['机の上に本があります。','Ada buku di atas meja.'],['庭に犬がいます。','Ada anjing di taman.']]],
+['N5','Kata sifat い dan な','い-adjektiva berakhir い (広い). な-adjektiva memakai な sebelum kata benda (静かな町). Keduanya diakhiri です.',[['この部屋は広いです。','Kamar ini luas.'],['静かな町です。','Kota yang tenang.']]],
+['N5','～から (karena)','Menyatakan alasan. Kalimat alasan + から + hasil.',[['雨ですから、行きません。','Karena hujan, saya tidak pergi.']]],
+['N4','～と思います','Menyatakan dugaan atau pendapat. Bentuk biasa + と思います.',[['明日は雨だと思います。','Saya kira besok hujan.']]],
+['N4','～そうです (tampak)','Kelihatannya. Ubah ます menjadi そうです, adjektiva い hilangkan い.',[['このケーキはおいしそうです。','Kue ini kelihatannya enak.']]],
+['N4','～ので (karena)','Alasan yang lebih sopan dan halus dari から. Bentuk biasa + ので.',[['熱があるので、休みます。','Karena demam, saya izin libur.']]],
+['N4','～たら (jika)','Jika/kalau/setelah. Bentuk lampau biasa + ら.',[['安かったら、買います。','Kalau murah, saya beli.']]],
+['N4','～てから (setelah)','Melakukan A, setelah itu B. Bentuk-て + から.',[['ご飯を食べてから、薬を飲みます。','Setelah makan, saya minum obat.']]],
+['N4','～すぎる (terlalu)','Berlebihan. Bentuk ます tanpa ます + すぎる.',[['昨日、食べすぎました。','Kemarin saya makan terlalu banyak.']]],
+['N4','～たほうがいい','Saran: sebaiknya. Bentuk lampau + ほうがいいです.',[['早く寝たほうがいいです。','Sebaiknya tidur lebih awal.']]],
+['N3','～ようにする','Berusaha membiasakan melakukan sesuatu. Bentuk kamus/ない + ようにする.',[['毎日、運動するようにしています。','Saya berusaha berolahraga setiap hari.']]],
+['N3','～ことにする','Memutuskan melakukan sesuatu. Bentuk kamus + ことにする.',[['来月から日本語を習うことにしました。','Saya memutuskan belajar bahasa Jepang mulai bulan depan.']]],
+['N3','～はずです','Seharusnya / pasti (dugaan kuat).',[['彼はもう着いたはずです。','Seharusnya dia sudah sampai.']]],
+['N2','～に違いない','Pasti, tidak salah lagi.',[['あの人は先生に違いない。','Orang itu pasti guru.']]],
+['N2','～ざるを得ない','Terpaksa melakukan sesuatu.',[['雨なので、中止せざるを得ません。','Karena hujan, terpaksa dibatalkan.']]],
+['N1','～に至るまで','Sampai / hingga mencakup.',[['子供から大人に至るまで楽しめます。','Bisa dinikmati dari anak-anak hingga orang dewasa.']]],
+['N1','～ずにはいられない','Tidak bisa menahan diri untuk tidak melakukan.',[['その話を聞いて、笑わずにはいられなかった。','Mendengar cerita itu, saya tidak bisa menahan tawa.']]]];
+const GQ=[
+['ここに座っ（　）もいいですか。',['て','に','を','が'],0,'～てもいいですか = bolehkah (meminta izin).'],
+['ここで写真を撮っ（　）はいけません。',['て','た','ない','ます'],0,'～てはいけません = dilarang.'],
+['熱がある（　）、休みます。',['ので','ながら','たい','ほど'],0,'～ので = karena (alasan yang sopan).'],
+['早く寝た（　）がいいです。',['ほう','こと','もの','とき'],0,'～たほうがいい = sebaiknya.'],["私（　）学生です。",["は","を","に","で"],0,"は menandai topik kalimat: 私は学生です = Saya pelajar."],
+["図書館（　）本を読みます。",["に","で","を","は"],1,"で menandai tempat berlangsungnya aksi (membaca di perpustakaan)."],
+["学校（　）行きます。",["を","で","に","と"],2,"に menandai tujuan perjalanan."],
+["昨日、映画を（　）。",["見ます","見ました","見ません","見たい"],1,"“Kemarin” memakai bentuk lampau: 見ました."],
+["日本へ行き（　）です。 (ingin pergi)",["たい","ます","ない","ました"],0,"Bentuk ます + たい menyatakan keinginan."],
+["日本に行った（　）があります。",["こと","もの","とき","ため"],0,"Pola pengalaman: ～たことがあります."],
+["音楽を聞き（　）勉強します。",["ながら","たい","ました","ません"],0,"ながら = sambil melakukan dua hal bersamaan."],
+["毎日、薬を飲ま（　）なりません。",["なければ","たくて","ながら","ようと"],0,"～なければなりません = harus."]];
+const items=()=>{const a=[];[0,1].forEach(t=>KR.forEach((r,i)=>a.push('k'+t+i)));N5.forEach((_,i)=>a.push('a'+i));N4.forEach((_,i)=>a.push('b'+i));KJ.forEach((_,i)=>a.push('j'+i));GR.forEach((_,i)=>a.push('g'+i));MN.forEach((_,i)=>a.push('e'+i));VC.forEach((_,i)=>a.push('v'+i));VK.forEach((_,i)=>a.push('w'+i));VL.forEach((_,i)=>a.push('x'+i));return a};
+const MN=[
+['Cara membungkuk (お辞儀 Ojigi)','Ada 3 tingkat: ringan 15° (sesama), sedang 30° (atasan/pelanggan), dalam 45° (minta maaf / terima kasih besar). Punggung lurus, pandangan turun.','よろしくお願いします。','yoroshiku onegaishimasu','Mohon bantuan dan kerja samanya.','Berkenalan dengan rekan baru: bungkuk 30° sambil mengucapkannya.'],
+['Cara mengucapkan salam','Salam disesuaikan waktu: pagi おはようございます, siang こんにちは, malam こんばんは. Ucapkan dengan jelas sambil menatap lawan bicara.','おはようございます。','ohayou gozaimasu','Selamat pagi.','Bertemu tetangga di lift pada pagi hari.'],
+['Berbicara kepada orang lebih tua','Pakai bentuk sopan (です/ます), panggil dengan nama + さん, hindari あなた.','お元気ですか。','ogenki desu ka','Apa kabar?','Menyapa kakek tetangga di jalan.'],
+['Berbicara kepada atasan dan guru','Gunakan bahasa hormat (敬語), panggil dengan jabatan: 先生, 部長. Jangan memotong pembicaraan.','先生、質問してもよろしいでしょうか。','sensei, shitsumon shite mo yoroshii deshou ka','Guru, bolehkah saya bertanya?','Bertanya kepada guru setelah kelas selesai.'],
+['Etika makan dengan sumpit','Jangan menancapkan sumpit di nasi, jangan oper makanan sumpit ke sumpit, jangan menunjuk dengan sumpit. Ucapkan sebelum dan sesudah makan.','いただきます。','itadakimasu','Saya terima makanan ini. (sesudah makan: ごちそうさまでした)','Makan di restoran bersama teman Jepang.'],
+['Masuk rumah orang Jepang','Lepas sepatu di genkan, arahkan ujung sepatu ke luar, pakai sandal rumah, lepas sandal sebelum masuk ruang tatami.','お邪魔します。','ojamashimasu','Permisi (maaf mengganggu).','Dikunjungi ke rumah teman kuliah.'],
+['Transportasi umum','Antri rapi, ponsel mode senyap, jangan menelepon, beri tempat duduk prioritas, bicara pelan.','すみません、降ります。','sumimasen, orimasu','Permisi, saya turun.','Kereta penuh dan kamu harus lewat ke pintu.'],
+['Etika bertamu','Datang tepat waktu (jangan terlalu awal), bawa oleh-oleh kecil, berikan dengan dua tangan.','つまらないものですが、どうぞ。','tsumaranai mono desu ga, douzo','Hanya hadiah kecil, silakan terima.','Memberi kue kepada tuan rumah.'],
+['Etika di tempat kerja','Datang 10 menit lebih awal. Terapkan 報連相: lapor, kabar, konsultasi. Pamit saat pulang lebih dulu.','お先に失礼します。','osaki ni shitsurei shimasu','Saya pulang duluan.','Jam kerja selesai tapi rekan masih lembur.'],
+['Etika meminta maaf','Bungkuk dalam, minta maaf lebih dulu, jelaskan singkat, lalu tawarkan solusi. Jangan berdalih panjang.','申し訳ありません。','moushiwake arimasen','Mohon maaf sebesar-besarnya.','Terlambat datang rapat.'],
+['Etika mengucapkan terima kasih','Ucapkan sambil membungkuk ringan. Untuk bantuan besar tambahkan お世話になりました.','ありがとうございます。','arigatou gozaimasu','Terima kasih.','Dibantu kasir minimarket.'],
+['Menerima barang','Terima dengan dua tangan sambil sedikit membungkuk. Kartu nama dilihat dulu, lalu diletakkan rapi di meja.','頂戴いたします。','choudai itashimasu','Saya terima (sangat sopan).','Menerima kartu nama klien.'],
+['Ketika melakukan kesalahan','Segera lapor ke atasan, jangan menyembunyikan, minta maaf, lalu jelaskan cara memperbaiki.','ご迷惑をおかけして、申し訳ありません。','gomeiwaku wo okakeshite, moushiwake arimasen','Maaf telah merepotkan.','Salah memasukkan data pesanan.']];
+const parse=s=>{let c='',o=[];s.trim().split('\n').forEach(l=>{if(l[0]==='#')c=l.slice(1).trim();else if(l.trim()){const a=l.split('|');a.c=c;o.push(a)}});return o};
+const VC=parse(`#Kata Benda
+くつ|靴|kutsu|sepatu|靴を脱ぎます。|Melepas sepatu.
+かばん|鞄|kaban|tas|鞄は重いです。|Tasnya berat.
+かぎ|鍵|kagi|kunci|鍵を忘れました。|Lupa kunci.
+#Kata Kerja
+あらう|洗う|arau|mencuci|手を洗います。|Mencuci tangan.
+つくる|作る|tsukuru|membuat|ご飯を作ります。|Membuat makanan.
+あける|開ける|akeru|membuka|窓を開けます。|Membuka jendela.
+#Kata Sifat
+うるさい|うるさい|urusai|berisik|隣の部屋がうるさいです。|Kamar sebelah berisik.
+つよい|強い|tsuyoi|kuat|彼は強いです。|Dia kuat.
+ひろい|広い|hiroi|luas|部屋が広いです。|Kamarnya luas.
+#Kata Keterangan
+とても|とても|totemo|sangat|とても暑いです。|Sangat panas.
+ちょっと|ちょっと|chotto|sedikit|ちょっと待ってください。|Tunggu sebentar.
+いつも|いつも|itsumo|selalu|いつも早く起きます。|Selalu bangun pagi.
+#Kata Sambung
+そして|そして|soshite|lalu / dan|ご飯を食べて、そして寝ます。|Makan lalu tidur.
+でも|でも|demo|tetapi|高いです。でも、おいしいです。|Mahal, tetapi enak.
+だから|だから|dakara|karena itu|雨です。だから、行きません。|Hujan, jadi tidak pergi.
+#Kata Ganti
+かれ|彼|kare|dia (laki-laki)|彼は先生です。|Dia guru.
+かのじょ|彼女|kanojo|dia (perempuan)|彼女は医者です。|Dia dokter.
+みんな|みんな|minna|semuanya|みんな元気です。|Semua sehat.
+#Kata Tanya
+どうして|どうして|doushite|mengapa|どうして休みますか。|Mengapa libur?
+どれ|どれ|dore|yang mana|どれがいいですか。|Mana yang bagus?
+なんじ|何時|nanji|jam berapa|今、何時ですか。|Sekarang jam berapa?
+#Angka dan Waktu
+じかん|時間|jikan|waktu / jam|時間がありません。|Tidak ada waktu.
+まいあさ|毎朝|maiasa|setiap pagi|毎朝六時に起きます。|Bangun jam 6 tiap pagi.
+らいしゅう|来週|raishuu|minggu depan|来週テストがあります。|Minggu depan ada tes.
+#Keluarga
+りょうしん|両親|ryoushin|orang tua|両親は元気です。|Orang tuaku sehat.
+おじいさん|おじいさん|ojiisan|kakek|おじいさんは七十歳です。|Kakek berumur 70 tahun.
+おばあさん|おばあさん|obaasan|nenek|おばあさんは優しいです。|Nenek baik hati.
+#Sekolah
+きょうしつ|教室|kyoushitsu|ruang kelas|教室に入ります。|Masuk kelas.
+しゅくだい|宿題|shukudai|PR|宿題をします。|Mengerjakan PR.
+しけん|試験|shiken|ujian|明日、試験があります。|Besok ada ujian.
+#Rumah
+だいどころ|台所|daidokoro|dapur|台所で料理します。|Memasak di dapur.
+まど|窓|mado|jendela|窓を閉めてください。|Tolong tutup jendela.
+げんかん|玄関|genkan|pintu masuk|玄関で靴を脱ぎます。|Lepas sepatu di genkan.
+#Makanan
+すし|寿司|sushi|sushi|寿司が好きです。|Suka sushi.
+みそしる|味噌汁|misoshiru|sup miso|味噌汁を飲みます。|Minum sup miso.
+ラーメン|ラーメン|raamen|ramen|ラーメンはおいしいです。|Ramennya enak.
+#Transportasi
+バス|バス|basu|bis|バスに乗ります。|Naik bis.
+ちかてつ|地下鉄|chikatetsu|kereta bawah tanah|地下鉄で行きます。|Pergi naik subway.
+しんかんせん|新幹線|shinkansen|kereta peluru|新幹線は速いです。|Shinkansen cepat.
+#Kesehatan
+あたま|頭|atama|kepala|頭が痛いです。|Kepala sakit.
+くすり|薬|kusuri|obat|薬を飲みます。|Minum obat.
+ねつ|熱|netsu|demam|熱があります。|Sedang demam.
+#Aktivitas Sehari-hari
+おふろ|お風呂|ofuro|mandi / bak mandi|お風呂に入ります。|Mandi.
+せんたく|洗濯|sentaku|mencuci baju|毎日、洗濯します。|Mencuci baju setiap hari.
+そうじ|掃除|souji|bersih-bersih|部屋を掃除します。|Membersihkan kamar.
+#Tempat Umum
+こうえん|公園|kouen|taman|公園で遊びます。|Bermain di taman.
+コンビニ|コンビニ|konbini|minimarket|コンビニで買います。|Membeli di minimarket.
+やっきょく|薬局|yakkyoku|apotek|薬局に行きます。|Pergi ke apotek.
+#Kata Benda
+つくえ|机|tsukue|meja|机の上に本があります。|Ada buku di atas meja.
+いす|椅子|isu|kursi|椅子に座ります。|Duduk di kursi.
+かさ|傘|kasa|payung|傘を持っています。|Membawa payung.
+#Kata Kerja
+すわる|座る|suwaru|duduk|ここに座ってください。|Silakan duduk di sini.
+たつ|立つ|tatsu|berdiri|電車の中で立ちます。|Berdiri di kereta.
+とる|取る|toru|mengambil|塩を取ってください。|Tolong ambilkan garam.
+おす|押す|osu|mendorong / menekan|ボタンを押します。|Menekan tombol.
+#Kata Sifat
+おもい|重い|omoi|berat|荷物が重いです。|Barangnya berat.
+かるい|軽い|karui|ringan|このかばんは軽いです。|Tas ini ringan.
+あかるい|明るい|akarui|terang|部屋が明るいです。|Kamarnya terang.
+#Kata Keterangan
+もう|もう|mou|sudah|もう食べました。|Sudah makan.
+まだ|まだ|mada|belum|まだ来ていません。|Belum datang.
+すぐ|すぐ|sugu|segera|すぐ行きます。|Segera pergi.
+#Kata Sambung
+それから|それから|sorekara|setelah itu|勉強して、それから寝ます。|Belajar lalu tidur.
+しかし|しかし|shikashi|namun|高いです。しかし、いいです。|Mahal, namun bagus.
+#Kata Ganti
+これ|これ|kore|ini|これは何ですか。|Ini apa?
+そこ|そこ|soko|di situ|そこに座ってください。|Silakan duduk di situ.
+#Kata Tanya
+いくつ|いくつ|ikutsu|berapa (jumlah)|りんごはいくつありますか。|Ada berapa apel?
+どなた|どなた|donata|siapa (sopan)|どなたですか。|Siapa Anda?
+#Angka dan Waktu
+いっぷん|一分|ippun|satu menit|一分待ってください。|Tunggu satu menit.
+ごぜん|午前|gozen|pagi (AM)|午前九時です。|Jam 9 pagi.
+ごご|午後|gogo|sore (PM)|午後三時に会います。|Bertemu jam 3 sore.
+#Keluarga
+おかあさん|お母さん|okaasan|ibu|お母さんは料理が上手です。|Ibu pandai memasak.
+おとうさん|お父さん|otousan|ayah|お父さんは会社員です。|Ayah karyawan perusahaan.
+#Sekolah
+ノート|ノート|nooto|buku catatan|ノートに書きます。|Menulis di buku catatan.
+じしょ|辞書|jisho|kamus|辞書で調べます。|Mencari di kamus.
+#Rumah
+トイレ|トイレ|toire|toilet|トイレはどこですか。|Toilet di mana?
+れいぞうこ|冷蔵庫|reizouko|kulkas|冷蔵庫に入れます。|Memasukkan ke kulkas.
+#Makanan
+さしみ|刺身|sashimi|sashimi|刺身を食べます。|Makan sashimi.
+おにぎり|おにぎり|onigiri|onigiri|おにぎりを作ります。|Membuat onigiri.
+#Transportasi
+きっぷ|切符|kippu|tiket|切符を買います。|Membeli tiket.
+でぐち|出口|deguchi|pintu keluar|出口はどこですか。|Pintu keluar di mana?
+#Kesehatan
+おなか|お腹|onaka|perut|お腹が痛いです。|Perut sakit.
+かぜ|風邪|kaze|flu / masuk angin|風邪をひきました。|Terkena flu.
+#Aktivitas Sehari-hari
+はみがき|歯磨き|hamigaki|menyikat gigi|毎晩、歯磨きをします。|Menyikat gigi tiap malam.
+かいもの|買い物|kaimono|belanja|買い物に行きます。|Pergi belanja.
+#Tempat Umum
+スーパー|スーパー|suupaa|supermarket|スーパーで野菜を買います。|Beli sayur di supermarket.
+こうばん|交番|kouban|pos polisi|交番で道を聞きます。|Bertanya jalan di pos polisi.`);
+const VK=parse(`#Nama Pekerjaan
+かいしゃいん|会社員|kaishain|karyawan perusahaan
+こうじょう|工場|koujou|pabrik
+けんせつ|建設|kensetsu|konstruksi
+うんてんしゅ|運転手|untenshu|sopir
+りょうりにん|料理人|ryourinin|koki
+てんいん|店員|ten'in|pegawai toko
+かんごし|看護師|kangoshi|perawat
+のうぎょう|農業|nougyou|pertanian
+#Industri dan Pabrik
+せいさん|生産|seisan|produksi
+ラインさぎょう|ライン作業|rain sagyou|kerja lini produksi
+#Konstruksi
+げんば|現場|genba|lokasi kerja
+ヘルメット|ヘルメット|herumetto|helm
+#Pertanian
+はたけ|畑|hatake|ladang
+しゅうかく|収穫|shuukaku|panen
+#Perikanan
+りょうし|漁師|ryoushi|nelayan
+ふね|船|fune|kapal
+#Perhotelan
+フロント|フロント|furonto|resepsionis
+よやく|予約|yoyaku|reservasi
+#Restoran
+ちゅうもん|注文|chuumon|pesanan
+ちゅうぼう|厨房|chuubou|dapur restoran
+#Perawatan Lansia
+かいご|介護|kaigo|perawatan lansia
+りようしゃ|利用者|riyousha|penerima layanan
+#Logistik
+にもつ|荷物|nimotsu|barang / paket
+はいたつ|配達|haitatsu|pengiriman
+#Perkantoran
+しょるい|書類|shorui|dokumen
+ほうこく|報告|houkoku|laporan
+#Teknologi
+パソコン|パソコン|pasokon|komputer
+プログラム|プログラム|puroguramu|program
+#Perdagangan
+しょうひん|商品|shouhin|barang dagangan
+うりあげ|売上|uriage|penjualan
+#Kebersihan
+ごみ|ごみ|gomi|sampah
+そうじ|掃除|souji|membersihkan
+#Keselamatan Kerja
+あんぜん|安全|anzen|keselamatan
+きけん|危険|kiken|bahaya
+ちゅうい|注意|chuui|hati-hati
+#Waktu Kerja
+きゅうけい|休憩|kyuukei|istirahat
+ざんぎょう|残業|zangyou|lembur
+きゅうりょう|給料|kyuuryou|gaji
+#Peralatan Kerja
+どうぐ|道具|dougu|peralatan
+てぶくろ|手袋|tebukuro|sarung tangan
+せいふく|制服|seifuku|seragam
+#Nama Pekerjaan
+いしゃ|医者|isha|dokter|医者は病院で働きます。|Dokter bekerja di rumah sakit.
+でんきこう|電気工|denkikou|tukang listrik|電気工が配線を直します。|Tukang listrik memperbaiki kabel.
+だいく|大工|daiku|tukang kayu|大工が家を建てます。|Tukang kayu membangun rumah.
+せいびし|整備士|seibishi|mekanik|整備士が車を直します。|Mekanik memperbaiki mobil.
+#Industri dan Pabrik
+ふりょうひん|不良品|furyouhin|barang cacat|不良品を探してください。|Tolong cari barang cacat.
+けんさ|検査|kensa|pemeriksaan|製品を検査します。|Memeriksa produk.
+きかい|機械|kikai|mesin|機械を止めてください。|Tolong matikan mesin.
+#Konstruksi
+ざいりょう|材料|zairyou|bahan|材料を運びます。|Mengangkut bahan.
+あしば|足場|ashiba|perancah|足場に気をつけてください。|Hati-hati dengan perancah.
+#Pertanian
+たね|種|tane|benih|種をまきます。|Menabur benih.
+みずやり|水やり|mizuyari|menyiram|毎朝、水やりをします。|Menyiram tiap pagi.
+#Perikanan
+あみ|網|ami|jaring|網を引きます。|Menarik jaring.
+#Perhotelan
+チェックイン|チェックイン|chekku in|check-in|チェックインは三時からです。|Check-in mulai jam 3.
+きゃくしつ|客室|kyakushitsu|kamar tamu|客室を掃除します。|Membersihkan kamar tamu.
+#Restoran
+おすすめ|おすすめ|osusume|rekomendasi|おすすめは何ですか。|Apa rekomendasinya?
+かいけい|会計|kaikei|pembayaran|お会計をお願いします。|Tolong tagihannya.
+#Perawatan Lansia
+にゅうよく|入浴|nyuuyoku|mandi (perawatan)|入浴を手伝います。|Membantu mandi.
+くるまいす|車椅子|kuruma isu|kursi roda|車椅子を押します。|Mendorong kursi roda.
+#Logistik
+そうこ|倉庫|souko|gudang|倉庫に荷物を置きます。|Menaruh barang di gudang.
+トラック|トラック|torakku|truk|トラックで運びます。|Mengangkut dengan truk.
+#Perkantoran
+かいぎしつ|会議室|kaigishitsu|ruang rapat|会議室で話します。|Berbicara di ruang rapat.
+めいし|名刺|meishi|kartu nama|名刺を交換します。|Bertukar kartu nama.
+しめきり|締め切り|shimekiri|tenggat|締め切りは明日です。|Tenggatnya besok.
+#Teknologi
+データ|データ|deeta|data|データを保存します。|Menyimpan data.
+システム|システム|shisutemu|sistem|システムが止まりました。|Sistem berhenti.
+#Perdagangan
+ざいこ|在庫|zaiko|stok|在庫があります。|Stok tersedia.
+#Kebersihan
+ぞうきん|雑巾|zoukin|kain lap|雑巾でふきます。|Mengelap dengan kain lap.
+#Keselamatan Kerja
+ひなん|避難|hinan|evakuasi|すぐ避難してください。|Segera evakuasi.
+けが|怪我|kega|cedera|怪我をしました。|Saya terluka.
+#Waktu Kerja
+しゅっきん|出勤|shukkin|masuk kerja|八時に出勤します。|Masuk kerja jam 8.
+たいきん|退勤|taikin|pulang kerja|六時に退勤します。|Pulang kerja jam 6.
+ちこく|遅刻|chikoku|terlambat|遅刻しないでください。|Jangan terlambat.
+#Peralatan Kerja
+ドライバー|ドライバー|doraibaa|obeng|ドライバーを取ってください。|Tolong ambil obengnya.
+はしご|梯子|hashigo|tangga|梯子を使います。|Menggunakan tangga.`);
+const PK=[['Dengan atasan','かしこまりました。','kashikomarimashita','Baik, saya mengerti.'],['Dengan atasan','確認をお願いします。','kakunin wo onegaishimasu','Mohon dicek.'],['Dengan rekan','手伝いましょうか。','tetsudaimashou ka','Mau saya bantu?'],['Dengan rekan','お疲れ様です。','otsukaresama desu','Terima kasih atas kerja kerasmu.'],['Dengan pelanggan','いらっしゃいませ。','irasshaimase','Selamat datang.'],['Dengan pelanggan','少々お待ちください。','shoushou omachi kudasai','Mohon tunggu sebentar.'],['Instruksi kerja','これを運んでください。','kore wo hakonde kudasai','Tolong bawa ini.'],['Keselamatan','ヘルメットをかぶってください。','herumetto wo kabutte kudasai','Tolong pakai helm.'],['Izin tidak masuk','明日、休ませていただけませんか。','ashita yasumasete itadakemasen ka','Bolehkah saya izin libur besok?'],['Izin tidak masuk','熱があるので、今日は休みます。','netsu ga aru node, kyou wa yasumimasu','Karena demam, hari ini saya izin.'],['Wawancara kerja','自己紹介をお願いします。','jikoshoukai wo onegaishimasu','Tolong perkenalkan diri Anda.'],['Wawancara kerja','一生懸命頑張ります。','isshoukenmei ganbarimasu','Saya akan berusaha sungguh-sungguh.']];
+const VL=parse(`#N3
+かんきょう|環境|kankyou|lingkungan|環境を守りましょう。|Mari jaga lingkungan.
+けいかく|計画|keikaku|rencana|旅行の計画を立てます。|Menyusun rencana perjalanan.
+しゅうしょく|就職|shuushoku|mencari kerja|来年、就職します。|Tahun depan saya mulai bekerja.
+せきにん|責任|sekinin|tanggung jawab|責任を持って働きます。|Bekerja dengan tanggung jawab.
+たしか|確か|tashika|kalau tidak salah|確か、明日休みです。|Kalau tidak salah besok libur.
+ようやく|ようやく|youyaku|akhirnya|ようやく終わりました。|Akhirnya selesai.
+かんじょう|感情|kanjou|perasaan|感情を表します。|Mengungkapkan perasaan.
+あんない|案内|annai|pemandu / informasi|町を案内します。|Memandu keliling kota.
+#N2
+えいきょう|影響|eikyou|pengaruh|天気の影響を受けます。|Terpengaruh cuaca.
+かいけつ|解決|kaiketsu|penyelesaian|問題を解決します。|Menyelesaikan masalah.
+きぼう|希望|kibou|harapan|希望を持っています。|Memiliki harapan.
+せいけつ|清潔|seiketsu|bersih|清潔な部屋です。|Kamar yang bersih.
+ふきゅう|普及|fukyuu|menyebar luas|スマホが普及しました。|Ponsel pintar menyebar luas.
+かくにん|確認|kakunin|konfirmasi|予定を確認します。|Mengecek jadwal.
+じゅうよう|重要|juuyou|penting|重要な書類です。|Dokumen penting.
+たいおう|対応|taiou|penanganan|お客様に対応します。|Menangani pelanggan.
+#N1
+いっそう|一層|issou|lebih lagi|一層努力します。|Berusaha lebih keras lagi.
+こうけん|貢献|kouken|kontribusi|社会に貢献します。|Berkontribusi bagi masyarakat.
+せっきょくてき|積極的|sekkyokuteki|proaktif|積極的に参加します。|Berpartisipasi aktif.
+てっていてき|徹底的|tetteiteki|menyeluruh|徹底的に調べます。|Memeriksa secara menyeluruh.
+どうさつ|洞察|dousatsu|wawasan tajam|鋭い洞察力です。|Wawasan yang tajam.
+ひんぱん|頻繁|hinpan|sering|頻繁に連絡します。|Sering menghubungi.
+ようせい|要請|yousei|permintaan resmi|協力を要請します。|Meminta kerja sama.
+かんよう|寛容|kan-you|toleran|寛容な態度です。|Sikap yang toleran.`);
+const fcat={u:'',k:'',l:''};
+function lib(L,key,pre,title){const cs=[...new Set(L.map(w=>w.c))],cur=fcat[key];return `<h2>${title}</h2><p class='sub'>${L.length} kosakata. Pilih kategori:</p><div style='display:flex;gap:6px;overflow-x:auto;padding-bottom:8px'><button class='lb ${cur===''?'on':''}' data-fc='${key}|'>Semua</button>${cs.map(c=>`<button class='lb ${cur===c?'on':''}' data-fc='${key}|${c}' style='white-space:nowrap'>${c}</button>`).join('')}</div>`+L.map((w,i)=>({w,i})).filter(x=>!cur||x.w.c===cur).map(({w,i})=>`<div class='card'><div class='row'><div><div class='jp'>${ruby(w[1],w[0])}</div><div class='rm'>${w[2]}</div><b>${w[3]}</b></div>${sp(w[0])}</div>${w[4]?`<div class='ex row'><div><span style='font-size:16px'>${w[4]}</span><div class='rm'>${w[5]}</div></div>${sp(w[4])}</div>`:''}<div style='margin-top:8px'>${lb(pre+i)}</div></div>`).join('')}
+// ---------- UI helpers ----------
+const sp=t=>`<button class="sp" data-s="${t}" aria-label="Putar suara">🔊</button>`;
+const lb=id=>`<button class="lb ${st.l[id]?'on':''}" data-l="${id}">${st.l[id]?'✓ Dipelajari':'Tandai dipelajari'}</button>`;
+const ruby=(k,f)=>k===f?f:`<ruby>${k}<rt>${f}</rt></ruby>`;
+let kt=0,qz=null;
+const NAV=[["home","Beranda"],["kana","Hiragana & Katakana"],["n5","Kosakata N5"],["n4","Kosakata N4"],["kanji","Kanji"],["grammar","Grammar"],["etika","Etika Jepang"],["kosakata","Kosakata Tema"],["kerja","Dunia Kerja"],["lanjut","N3–N1"],["quiz","Kuis"],["progress","Progress"]];
+// ---------- Views ----------
+const V={
+home(){const p=pct();return `<div class="card hero">${panda(110)}<h1>TPT – Belajar Bahasa Jepang Jadi Lebih Mudah!</h1><p>Mulai perjalanan bahasa Jepangmu dari N5 hingga N4. Belajar huruf, kosakata, Kanji, Grammar, dan dengarkan langsung cara pengucapannya.</p><a class="btn" href="#n5">Mulai Belajar</a><a class="btn d" href="#kana">Pelajari Hiragana</a><a class="btn o" href="#quiz">Latihan Sekarang</a></div>
+<div class="card"><div class="row"><b>Progres belajarmu</b><b>${p}%</b></div><div class="bar"><div style="width:${p}%"></div></div></div>
+<div class="grid">${[["あ","kana","Hiragana & Katakana"],["📘","n5","Kosakata N5"],["📗","n4","Kosakata N4"],["漢","kanji","Kanji"],["文","grammar","Grammar"],["🙇","etika","Etika Jepang"],["🗂️","kosakata","Kosakata Tema"],["💼","kerja","Dunia Kerja"],["✏️","quiz","Latihan & Kuis"]].map(f=>`<a class="card fc" href="#${f[1]}"><span>${f[0]}</span>${f[2]}</a>`).join('')}</div>
+<p class="note">💡 Tips: ketuk tombol 🔊 untuk mendengar suara. Di Android, pastikan suara Jepang terpasang di Pengaturan > Output teks-ke-ucapan (Google).</p>`},
+kana(){const E=kt?KK:KH;return `<h2>Hiragana & Katakana</h2><p class="sub">Ketuk huruf untuk mendengar bunyinya.</p><div class="tabs"><button class="btn ${kt?'o':''}" data-kt="0">Hiragana</button><button class="btn ${kt?'':'o'}" data-kt="1">Katakana</button></div>`+
+KR.map((r,i)=>{const cs=[...(kt?conv(r[0]):r[0])],rm=r[1].split(' '),e=E[i].split('|');return `<div class="card"><div class="kg">${cs.map((c,j)=>`<button class="tile" data-s="${c}"><b>${c}</b><i>${rm[j]}</i></button>`).join('')}</div><div class="ex row"><div>Contoh: <span class="jp">${e[0]}</span><div class="rm">${e[1]} = ${e[2]}</div></div>${sp(e[0])}</div><div style="margin-top:8px">${lb('k'+kt+i)}</div></div>`}).join('')+
+`<div class="card note"><b>Cara membaca:</b> a i u e o dibaca seperti bahasa Indonesia. し = shi, ち = chi, つ = tsu, ふ = fu. っ kecil = jeda singkat (がっこう gakkou). Tanda ー memperpanjang bunyi vokal. ん dibaca n. Huruf を dibaca “o” dan hanya dipakai sebagai partikel objek.</div>`},
+vocab(L,k){return `<h2>Kosakata ${k}</h2><p class="sub">${L.length} kata. Ketuk 🔊 untuk mendengar.</p>`+L.map((w,i)=>{const id=(k==='N5'?'a':'b')+i;return `<div class="card"><div class="row"><div><div class="jp">${ruby(w[1],w[0])}</div><div class="rm">${w[2]}</div><div><b>${w[3]}</b></div></div>${sp(w[0])}</div><div style="margin-top:8px">${lb(id)}</div></div>`}).join('')},
+n5(){return V.vocab(N5,'N5')},n4(){return V.vocab(N4,'N4')},
+kanji(){return `<h2>Kanji N5–N4</h2><p class="sub">${KJ.length} kanji. Tombol suara kanji membaca kunyomi (atau onyomi).</p>`+KJ.map((k,i)=>{const r=k[3]!=='-'?k[3].split('(')[0]:k[2].split('・')[0];return `<div class="card"><div class="row"><div class="big">${k[0]}</div>${sp(r)}</div><p style="margin:6px 0"><b>${k[1]}</b><br>Onyomi: ${k[2]}<br>Kunyomi: ${k[3]}</p><div class="ex row"><div class="jp">${ruby(k[5],k[4])}<div class="rm">${k[6]}</div></div>${sp(k[4])}</div><div style="margin-top:8px">${lb('j'+i)}</div></div>`}).join('')},
+grammar(){return `<h2>Grammar N5–N4</h2><p class="sub">Penjelasan sederhana dengan contoh kalimat.</p>`+GR.map((g,i)=>`<div class="card"><span class="lb on" style="background:var(--bl);border-color:var(--bl)">${g[0]}</span><h3 style="margin:8px 0 4px">${g[1]}</h3><p style="margin:0 0 6px">${g[2]}</p>${g[3].map(e=>`<div class="ex row"><div><span class="jp" style="font-size:18px">${e[0]}</span><div class="rm">${e[1]}</div></div>${sp(e[0])}</div>`).join('')}<div style="margin-top:8px">${lb('g'+i)}</div></div>`).join('')},
+etika(){return `<h2>日本のマナー – Etika Jepang</h2><p class='sub'>${MN.length} materi sopan santun.</p>`+MN.map((m,i)=>`<div class='card'><h3 style='margin:0 0 4px'>${m[0]}</h3><p style='margin:0 0 6px'>${m[1]}</p><div class='ex row'><div><span class='jp' style='font-size:18px'>${m[2]}</span><div class='rm'>${m[3]}</div><b>${m[4]}</b></div>${sp(m[2])}</div><p class='note' style='margin:8px 0'>🧭 Situasi nyata: ${m[5]}</p>${lb('e'+i)}</div>`).join('')},
+kosakata(){return lib(VC,'u','v','Kosakata Tematik')},
+lanjut(){return lib(VL,'l','x','Kosakata N3–N1')+`<p class='note'>Kanji dan grammar N3–N1 ada di halaman Kanji dan Grammar (lihat label level).</p>`},
+kerja(){return lib(VK,'k','w','Kosakata Dunia Kerja')+`<h2 style='margin-top:16px'>Percakapan di Tempat Kerja</h2>`+PK.map(p=>`<div class='card'><span class='lb on'>${p[0]}</span><div class='row' style='margin-top:6px'><div><span class='jp' style='font-size:18px'>${p[1]}</span><div class='rm'>${p[2]}</div><b>${p[3]}</b></div>${sp(p[1])}</div></div>`).join('')},
+quiz(){if(!qz)return `<h2>Latihan & Kuis</h2><p class="sub">Pilih jenis kuis (pilihan ganda, nilai otomatis, dengan pembahasan).</p><div class="grid"><button class="card fc" data-q="vocab"><span>📘</span>Kuis Kosakata</button><button class="card fc" data-q="kanji"><span>漢</span>Kuis Kanji</button><button class='card fc' data-q='grammar'><span>文</span>Kuis Grammar</button><button class='card fc' data-q='umum'><span>🗂️</span>Kuis Kosakata Tema</button><button class='card fc' data-q='kerja'><span>💼</span>Kuis Dunia Kerja</button><button class='card fc' data-q='etika'><span>🙇</span>Kuis Etika</button><button class='card fc' data-q='lanjut'><span>🎓</span>Kuis N3–N1</button><button class='card fc' data-q='tes'><span>🏆</span>Tes Evaluasi (campuran)</button></div>`;
+if(qz.i>=qz.qs.length){const n=Math.round(qz.s/qz.qs.length*100);return `<div class="card hero">${panda(90)}<h2>Nilai: ${n}</h2><p>Benar ${qz.s} dari ${qz.qs.length}. ${n>=80?'Hebat sekali! 🎉':n>=50?'Bagus, terus berlatih!':'Jangan menyerah, ulangi materinya ya!'}</p><button class="btn" data-q="${qz.t}">Ulangi</button><button class="btn o" data-q="">Menu Kuis</button></div>`}
+const q=qz.qs[qz.i];return `<div class="row"><b>Soal ${qz.i+1}/${qz.qs.length}</b><span>Skor ${qz.s}</span></div><div class="bar"><div style="width:${qz.i/qz.qs.length*100}%"></div></div><div class="card" style="margin-top:12px"><div class="row"><div class="jp" style="font-size:20px">${q.q}</div>${q.a?sp(q.a):''}</div>${q.o.map((o,j)=>`<button class="opt ${qz.p!=null?(j===q.c?'ok':j===qz.p?'no':''):''}" data-o="${j}" ${qz.p!=null?'disabled':''}>${o}</button>`).join('')}${qz.p!=null?`<div class="note"><b>${qz.p===q.c?'✅ Benar!':'❌ Kurang tepat.'}</b> Pembahasan: ${q.e}</div><button class="btn" data-n="1" style="margin-top:8px">${qz.i+1>=qz.qs.length?'Lihat Nilai':'Lanjut'}</button>`:''}</div>`},
+progress(){const p=pct(),t=st.d[today()]||0,g=Math.min(100,Math.round(t/st.goal*100));const c=(pre,n)=>{let d=0;for(let i=0;i<n;i++)if(st.l[pre+i])d++;return d+'/'+n};
+const kn=[0,1].reduce((s,t)=>s+KR.filter((_,i)=>st.l['k'+t+i]).length,0);
+return `<h2>Progress Belajar</h2><div class="card"><div class="row"><b>Total kemajuan</b><b>${p}%</b></div><div class="bar"><div style="width:${p}%"></div></div></div>
+<div class="card"><div class="row"><b>Target harian</b><b>${t}/${st.goal} aktivitas</b></div><div class="bar"><div style="width:${g}%"></div></div><p class="rm">${t>=st.goal?'🎉 Target hari ini tercapai!':'Tandai materi atau jawab soal kuis untuk menambah.'}</p><label>Ubah target: <select id="gl">${[5,10,15,20,30].map(n=>`<option ${n===st.goal?'selected':''}>${n}</option>`).join('')}</select></label></div>
+<div class="card"><b>Rincian</b><p>Huruf kana (baris): ${kn}/30<br>Kosakata N5: ${c('a',N5.length)}<br>Kosakata N4: ${c('b',N4.length)}<br>Kanji: ${c('j',KJ.length)}<br>Grammar: ${c('g',GR.length)}<br>Etika Jepang: ${c('e',MN.length)}<br>Kosakata tema: ${c('v',VC.length)}<br>Kosakata kerja: ${c('w',VK.length)}<br>Kosakata N3–N1: ${c('x',VL.length)}</p><button class="btn o" data-reset="1">Reset progres</button></div>`}};
+function pct(){const a=items();return Math.round(a.filter(i=>st.l[i]).length/a.length*100)}
+function sh(a){return a.map(x=>[Math.random(),x]).sort((a,b)=>a[0]-b[0]).map(x=>x[1])}
+function pool(t){const m=a=>a.map(w=>({k:w[1],f:w[0],r:w[2],m:w[3]}));if(t==='vocab')return m([...N5,...N4]);if(t==='kanji')return KJ.map(k=>({k:k[0],f:k[4],r:k[4],m:k[1],x:`Onyomi ${k[2]}, kunyomi ${k[3]}.`}));if(t==='umum')return m(VC);if(t==='lanjut')return m(VL);if(t==='kerja')return m(VK);return MN.map(x=>({k:x[2],f:x[2],r:x[3],m:x[4],x:'Situasi: '+x[5]}))}
+function gen(t,n){if(t==='grammar')return sh(GQ).slice(0,n).map(g=>({q:g[0],o:g[1],c:g[2],e:g[3]}));const P=pool(t);return sh(P).slice(0,n).map(w=>{const o=sh([w.m,...sh(P.filter(z=>z.m!==w.m)).slice(0,3).map(z=>z.m)]);return{q:`Apa arti 「${w.k}」?`,a:w.f,o,c:o.indexOf(w.m),e:`${w.k} (${w.r}) berarti “${w.m}”. ${w.x||''}`}})}
+function mk(t){qz={t,qs:t==='tes'?sh(['vocab','kanji','umum','kerja','etika','grammar'].flatMap(x=>gen(x,2))):gen(t,8),i:0,s:0,p:null}}
+function mkOld(t){let qs=[];if(t==='grammar')qs=sh(GQ).map(g=>({q:g[0],o:g[1],c:g[2],e:g[3]}));
+else{const P=t==='vocab'?[...N5,...N4].map(w=>({k:w[1],f:w[0],r:w[2],m:w[3]})):KJ.map(k=>({k:k[0],f:k[4],r:k[4],m:k[1],x:`Onyomi ${k[2]}, kunyomi ${k[3]}.`}));
+qs=sh(P).slice(0,8).map(w=>{const w3=sh(P.filter(z=>z.m!==w.m)).slice(0,3).map(z=>z.m),o=sh([w.m,...w3]);return {q:`Apa arti 「${w.k}」${t==='vocab'?'('+w.f+')':''}?`,a:t==='vocab'?w.f:w.f,o,c:o.indexOf(w.m),e:`${w.k} (${w.r}) berarti “${w.m}”. ${w.x||''}`}})}
+qz={t,qs,i:0,s:0,p:null}}
+// ---------- Router & events ----------
+function render(){const h=(location.hash||'#home').slice(1),pg=V[h]?h:'home';
+$('#nav').innerHTML=NAV.map(n=>`<a href="#${n[0]}" class="${n[0]===pg?'on':''}">${n[1]}</a>`).join('');
+$('#app').innerHTML=V[pg]();if(!window._k||window._pg!==pg){window.scrollTo(0,0)}window._pg=pg;window._k=1;
+const a=$('#nav a.on');if(a)a.scrollIntoView({inline:'center',block:'nearest'})}
+addEventListener('hashchange',()=>{qz=null;render()});
+document.addEventListener('click',e=>{const t=e.target.closest('[data-s],[data-l],[data-kt],[data-q],[data-o],[data-n],[data-reset],[data-fc]');if(!t)return;const d=t.dataset;
+if(d.fc!==undefined){const f=d.fc.split('|');fcat[f[0]]=f[1];return render()}if(d.s)return speak(d.s);
+if(d.l!==undefined){const y=window.scrollY;if(st.l[d.l])delete st.l[d.l];else{st.l[d.l]=1;bump()}save();render();window.scrollTo(0,y);return}
+if(d.kt!==undefined){kt=+d.kt;return render()}
+if(d.q!==undefined){if(d.q)mk(d.q);else qz=null;return render()}
+if(d.o!==undefined&&qz.p==null){qz.p=+d.o;if(qz.p===qz.qs[qz.i].c)qz.s++;bump();return render()}
+if(d.n){qz.i++;qz.p=null;render();return window.scrollTo(0,0)}
+if(d.reset&&confirm('Hapus semua progres belajar?')){st={l:{},d:{},goal:st.goal};save();render()}});
+document.addEventListener('change',e=>{if(e.target.id==='gl'){st.goal=+e.target.value;save();render()}});
+render();
+</script></body></html>
